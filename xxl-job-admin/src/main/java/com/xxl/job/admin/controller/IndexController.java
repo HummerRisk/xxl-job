@@ -46,6 +46,7 @@ public class IndexController {
 
 	@RequestMapping("/healthz")
 	@ResponseBody
+	@PermissionLimit(limit=false)
 	public String healthz() {
 		return "SUCCESS";
 	}
@@ -83,6 +84,8 @@ public class IndexController {
 	}
 
 	@RequestMapping("/help")
+	@ResponseBody
+	@PermissionLimit(limit=false)
 	public String help() {
 
 		/*if (!PermissionInterceptor.ifLogin(request)) {
