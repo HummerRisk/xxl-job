@@ -1,4 +1,6 @@
-FROM openjdk:8-jre-slim
+FROM  registry.cn-beijing.aliyuncs.com/hummerrisk/alpine:jre17
+#FROM openjdk:8-jre-slim
+
 MAINTAINER hummer
 
 ENV PARAMS=""
